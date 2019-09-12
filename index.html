@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Räknare</title>
+
+    <style type="text/css">
+    	#svar-lista {
+    		background-color: darkslateblue;
+    		color: white;
+			font-size: 24px;
+    		padding: 20px;
+    		width: 350px;
+    		list-style-type: none;
+    		display: none;
+    	}
+
+		.in {
+			width: 100px;
+			padding: 1px;
+			font-size: 18px
+		}
+	</style>
+	
+</head>
+<body>
+	<h1>Räknare</h1>
+
+		<input type="text" id="tal-1" class="in" placeholder="Tal 1" required /> &nbsp;
+
+		<select id="vad" class="in" style="width: 50px">
+			<option value="plus">&nbsp; + </option>
+			<option value="minus">&nbsp; - </option>
+			<option value="ganger">&nbsp; * </option>
+			<option value="delat">&nbsp; / </option>
+		</select> &nbsp;
+
+		<input type="text" id="tal-2" class="in" placeholder="Tal 2" required /> &nbsp;
+
+		<button class="in" id="btn">Räkna</button>
+
+	<p id="svar" style="display: none"></p>
+	
+    <div>
+        <ul id="svar-lista"></ul>
+	</div>
+	
+<script src="script.js"></script>
+</body>
+</html>
