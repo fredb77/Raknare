@@ -4,9 +4,9 @@ var svar2 = [], antal = 0;
 var btn = document.getElementById("btn").addEventListener("click", rakna);
 var svarLista = document.getElementById("svar-lista");
 
-// funktion som skriver ut en lista på talen man räknat
 function sparaLista(array){
 
+	// en loop som skriver ut alla talen man räknat ut i en lista
     for(i = antal; i < array.length; i++){
         var li1 = document.createElement("li");
         var txt = document.createTextNode(array[i]);
@@ -20,20 +20,28 @@ function rakna() {
 
 	var tal1 = document.getElementById("tal-1").value;
 	var tal2 = document.getElementById("tal-2").value;
-	var vad = document.getElementById("vad").selectedIndex;			// hämtar värdet från select taggen
+	// hämtar värdet från select taggen
+	var vad = document.getElementById("vad").selectedIndex;			
 	var rakna = document.getElementsByTagName("option")[vad].value; 
 	var sum = 0, result = 0;
 
 	var slista = document.getElementById("svar-lista");
 	slista.style.display = "block";
 
-	if (isNaN(tal1) || isNaN(tal2)) {								// kollar om det var ett nummer som skrevs in 
+	// kollar om det var ett nummer som skrevs in
+	if (isNaN(tal1) || isNaN(tal2)) {								 
 		slista.innerHTML = "Skriv ett nummer istället !!!";
 	}else {
 
-		switch (rakna)												// här använder den värdet som kommer från
-		{															// select, och beroende på vad som valdes
-			case "plus":											// så kommer någon av casearna köras
+		/*
+			här använder den värdet som kommer från
+			select, och beroende på vad som valdes
+			så kommer någon av casearna köras
+		*/
+
+		switch (rakna)												
+		{															
+			case "plus":											
 				sum = Number(tal1) + Number(tal2);
 				result = tal1 + " + " + tal2 + " = " + sum;
 				svar2.push(result);
